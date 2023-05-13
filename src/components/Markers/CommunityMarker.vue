@@ -1,17 +1,17 @@
 <template>
-<MapboxMarker :lng-lat="props.coordinates" @click="">
+<MapboxMarker :lng-lat="props.coordinates">
       <template v-slot:popup>
-        <div class="flex">
+        <div class="flex items-center">
           <div class="flex-shrink-0">
             <img
-              class="w-10 h-10 rounded-full"
-              :src="`@/assets/image/communities/${props.image}`"
+              class="rounded-full w-14 h-14"
+              :src="`images/communities/${props.image}`"
               alt="Community logo"
             />
           </div>
           <div class="ml-3">
-            <p class="text-sm font-medium text-gray-900">
-              {{ props.description }}
+            <p class="text-lg font-medium text-gray-900">
+              {{ props.name }}
             </p>
           </div>
         </div>
@@ -21,8 +21,7 @@
 
 <script setup lang="ts">
 import { MapboxMarker } from '@studiometa/vue-mapbox-gl'
-import { defineProps, ref } from 'vue'
-import AppSidebar from '../Sidebar/AppSidebar.vue'
+import { defineProps } from 'vue'
 
 
 const props = defineProps({
@@ -30,19 +29,13 @@ const props = defineProps({
     type: Array,
     required: true
   },
-  description: {
+  name: {
     type: String,
-    default: 'No description provided'
+    default: ''
   },
   image: {
     type: String,
     default: ''
   }
 })
-
-const sidebarOpen = ref(false);
-
-
-
-
 </script>

@@ -10,10 +10,11 @@
       <CommunityMarker
         :coordinates="feature.geometry.coordinates"
         :image="feature.properties.image"
-        :description="feature.properties.description"
+        :name="feature.properties.name"
       />
     </div>
   </MapboxMap>
+  <span v-if="hover">This is a secret message.</span>
 </template>
 
 <script setup lang="ts">
@@ -27,4 +28,5 @@ const accessToken = ref(
   'pk.eyJ1IjoiY2puYmVubmV0dCIsImEiOiJjbGhsaTRxc2EwOWw3M3FwOTQ0N3luaW5qIn0.8XbLwV61cr2oFs7ue0wCCw'
 )
 const westernAustralia = ref([121.8997, -25.5528])
+const hover = ref(false)
 </script>
