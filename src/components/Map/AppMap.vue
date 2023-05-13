@@ -91,7 +91,7 @@ onMounted(() => {
       ];
 
       // Fly to the clicked location
-      map.flyTo({ center: e.lngLat, zoom: targetZoom, speed: 5 });
+      map.flyTo({ center: e.lngLat, zoom: targetZoom, speed: 2 });
    
       // Wait for the fly to operation to finish
       map.once('moveend', () => {
@@ -99,7 +99,7 @@ onMounted(() => {
         const targetLngLat = map.unproject(targetPixelPosition);
         
         // Fly to the new center
-        map.flyTo({ center: targetLngLat });
+        map.flyTo({ center: targetLngLat, speed: 2 });
 
         props.toggleSidebar()
       });
