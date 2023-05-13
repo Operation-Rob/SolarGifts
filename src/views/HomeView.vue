@@ -4,7 +4,7 @@
     class="w-full h-[calc(100vh-24px)]"
     :toggleSidebar="toggleSidebar" />
     >
-  <AppSidebar :show="showSidebar"  />
+  <AppSidebar :show="showSidebar" @closed="showSidebar = false" />
 </template>
 
 <script setup lang="ts">

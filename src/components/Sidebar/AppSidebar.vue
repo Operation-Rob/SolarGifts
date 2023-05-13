@@ -12,7 +12,7 @@ const props = defineProps({
     default: 'No description provided'
   }
 })
-const open = ref(false)
+const open = ref(props.show)
 </script>
 
 
@@ -56,7 +56,7 @@ const open = ref(false)
                     <div class="flex items-center ml-3 h-7">
                       <button
                         class="text-gray-400 bg-white rounded-md hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        @click="open = false"
+                        @click="$emit('closed')"
                       >
                         <span class="sr-only">Close panel</span>
                         <!-- Heroicon name: outline/x -->
