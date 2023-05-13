@@ -17,7 +17,8 @@
     "mapbox-gl": "^2.14.1",
     "pinia": "^2.0.36",
     "vue": "^3.3.2",
-    "vue-router": "^4.2.0"
+    "vue-router": "^4.2.0",
+    "vue-slider-component": "^3.2.24"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.2.0",
