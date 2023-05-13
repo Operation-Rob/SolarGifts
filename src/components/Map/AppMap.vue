@@ -51,6 +51,8 @@ onMounted(() => {
       closeOnClick: false
     })
 
+
+
     map.on('mouseenter', 'places', (e) => {
       map.getCanvas().style.cursor = 'pointer'
 
@@ -80,9 +82,27 @@ onMounted(() => {
       popup.remove()
     })
 
-    map.on('mousedown', 'places', () => {
+    map.on('click', 'places', (e) => {
       popup.remove()
-      props.toggleSidebar()
+      const targetZoom = 10;  // Adjust to your desired zoom level
+      const targetPixelPosition: [number, number] = [
+        7 * map.getContainer().clientWidth / 8,
+        map.getContainer().clientHeight / 2
+      ];
+
+      // Fly to the clicked location
+      map.flyTo({ center: e.lngLat, zoom: targetZoom, speed: 2 });
+   
+      // Wait for the fly to operation to finish
+      map.once('moveend', () => {
+        // Calculate the new center that corresponds to the target pixel position
+        const targetLngLat = map.unproject(targetPixelPosition);
+        
+        // Fly to the new center
+        map.flyTo({ center: targetLngLat, speed: 2 });
+
+        props.toggleSidebar()
+      });
     })
   })
 })
