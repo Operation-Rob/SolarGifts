@@ -80,7 +80,7 @@ onMounted(() => {
       popup.remove()
     })
 
-    map.on('mousedown', () => {
+    map.on('mousedown', 'places', () => {
       popup.remove()
       props.toggleSidebar()
     })
