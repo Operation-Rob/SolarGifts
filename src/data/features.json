@@ -1,0 +1,149 @@
+{
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "1.png",
+        "name": "Wunyunba",
+        "description": "Nestled in a picturesque valley, Wunyunba is known for its vibrant fields and friendly community. The residents here take pride in their sustainable lifestyle and embrace solar energy. Their handmade gifts include beautifully crafted sun catchers and stained glass artworks that capture the essence of their sun-kissed surroundings."
+      },
+      "geometry": {
+        "coordinates": [
+          128.87264,
+          -25.030545
+        ],
+        "type": "Point"
+      },
+      "id": "20b9c595e4d659de2d5e3ce275ccd547"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "2.png",
+        "name": "Djindaan",
+        "description": "Djindaan is a close-knit community surrounded by lush greenery and rolling hills. The residents value peace and tranquility, and their handmade gifts reflect their love for nature. They create intricately designed wooden birdhouses and hand-carved walking sticks adorned with delicate engravings."
+      },
+      "geometry": {
+        "coordinates": [
+          115.957008,
+          -27.285444
+        ],
+        "type": "Point"
+      },
+      "id": "39c00d1c2aa287ebfc383a27811537ea"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "3.png",
+        "name": "Nyinda",
+        "description": "Situated along the banks of a meandering river, Nyinda is a serene and idyllic village. The locals have a deep connection with the water and showcase their gratitude through handmade pottery. They craft exquisite ceramic vases and bowls inspired by the river's calming flow, decorated with intricate patterns and glazes."
+      },
+      "geometry": {
+        "coordinates": [
+          118.441132,
+          -33.494453
+        ],
+        "type": "Point"
+      },
+      "id": "3a41e6d089b25fb0d90298e02f63edcd"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "4.png",
+        "name": "Boorgoon",
+        "description": "Hidden amidst a dense pine forest, Boorgoon is a haven for outdoor enthusiasts and nature lovers. The community is renowned for its talented woodworkers who transform fallen timber into stunning handmade gifts. They create one-of-a-kind wooden cutting boards, intricate jewelry boxes, and finely carved wooden ornaments."
+      },
+      "geometry": {
+        "coordinates": [
+          126.996932,
+          -19.541064
+        ],
+        "type": "Point"
+      },
+      "id": "6a8631a1cfe3355b1cc2496f18bd129e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "5.png",
+        "name": "Dandjoo Bidi",
+        "description": "Dandjoo Bidi is a coastal community blessed with pristine beaches and a thriving fishing industry. The residents here celebrate their maritime heritage through their handmade gifts. They craft exquisite seashell jewelry, intricately woven fishing nets, and decorative glass bottles filled with sand and seashells, reminiscent of their beachside location."
+      },
+      "geometry": {
+        "coordinates": [
+          125.922745,
+          -27.563494
+        ],
+        "type": "Point"
+      },
+      "id": "90cdaf4e8fe8164ea69510f2524162c8"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "6.png",
+        "name": "Wandoo Karda",
+        "description": "Tucked away in a peaceful valley, Wandoo Karda is known for its lush meadows and blooming wildflowers. The community's skilled artisans specialize in traditional basket weaving. They create beautiful handwoven baskets using locally sourced natural fibers, perfect for picnics or as decorative pieces for homes."
+      },
+      "geometry": {
+        "coordinates": [
+          122.433698,
+          -30.729156
+        ],
+        "type": "Point"
+      },
+      "id": "9ccec9c29ddfbbdad15611ac3ce5e46e"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "7.png",
+        "name": "Djidi Djidi Wirn",
+        "description": "Overlooking the vast ocean, Djidi Djidi Wirn greets each day with breathtaking views of the sunrise. The residents here are skilled in the art of pottery and create unique handmade ceramic mugs, bowls, and plates. These items feature hand-painted coastal motifs and stunning gradients, capturing the essence of the ever-changing colors of the sky."
+      },
+      "geometry": {
+        "coordinates": [
+          121.515233,
+          -30.654362
+        ],
+        "type": "Point"
+      },
+      "id": "afd4c15b01b43e386c354f1ea0f173c3"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "8.png",
+        "name": "Balga Nyungar",
+        "description": "Surrounded by majestic oak trees, Balga Nyungar is a place of natural beauty and tranquility. The community members possess a remarkable talent for woodworking. They handcraft intricate wooden puzzles, decorative candle holders, and heirloom-quality furniture, using locally sourced timber and showcasing their dedication to craftsmanship."
+      },
+      "geometry": {
+        "coordinates": [
+          121.376607,
+          -23.954253
+        ],
+        "type": "Point"
+      },
+      "id": "b7fa580597da835bde67e996eea0c979"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "image": "9.png",
+        "name": "Boodja Karla",
+        "description": "Set beneath a sparkling night sky, Boodja Karla is renowned for its clear, unpolluted views of the stars. The community's artisans create mesmerizing handmade dreamcatchers adorned with feathers, beads, and celestial-themed designs. These intricately woven dreamcatchers are believed to bring peaceful dreams and protect against negative energy."
+      },
+      "geometry": {
+        "coordinates": [
+          116.936268,
+          -22.211915
+        ],
+        "type": "Point"
+      },
+      "id": "d4a9f29939991f776b9837ddc96885ef"
+    }
+  ],
+  "type": "FeatureCollection"
+}
