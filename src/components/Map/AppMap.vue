@@ -9,6 +9,13 @@ import dataset from '@/data/features.json'
 import { onMounted, createApp, defineComponent, nextTick } from 'vue'
 import TooltipContent from '@/components/Map/TooltipContent.vue'
 
+const props = defineProps({
+  toggleSidebar: {
+    type: Function,
+    required: true
+  }
+})
+
 const accessToken =
   'pk.eyJ1IjoiY2puYmVubmV0dCIsImEiOiJjbGhsaTRxc2EwOWw3M3FwOTQ0N3luaW5qIn0.8XbLwV61cr2oFs7ue0wCCw'
 const westernAustralia: [number, number] = [121.8997, -25.5528]
@@ -61,7 +68,7 @@ onMounted(() => {
         extends: TooltipContent,
         setup() {
           return { properties }
-        },
+        }
       })
       nextTick(() => {
         createApp(popupComponent).mount('#popup-content')
@@ -71,6 +78,11 @@ onMounted(() => {
     map.on('mouseleave', 'places', () => {
       map.getCanvas().style.cursor = ''
       popup.remove()
+    })
+
+    map.on('mousedown', () => {
+      popup.remove()
+      props.toggleSidebar()
     })
   })
 })
