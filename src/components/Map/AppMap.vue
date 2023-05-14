@@ -6,7 +6,7 @@
 import 'mapbox-gl/dist/mapbox-gl.css'
 import mapboxgl from 'mapbox-gl'
 import dataset from '@/data/features.json'
-import { onMounted, createApp, defineComponent, nextTick } from 'vue'
+import { onMounted, createApp, defineComponent, nextTick, inject } from 'vue'
 import TooltipContent from '@/components/Map/TooltipContent.vue'
 
 const props = defineProps({
@@ -15,6 +15,8 @@ const props = defineProps({
     required: true
   }
 })
+
+const emitter: any = inject('emitter');   // Inject `emitter`
 
 const accessToken =
   'pk.eyJ1IjoiY2puYmVubmV0dCIsImEiOiJjbGhsaTRxc2EwOWw3M3FwOTQ0N3luaW5qIn0.8XbLwV61cr2oFs7ue0wCCw'
@@ -26,11 +28,13 @@ mapboxgl.accessToken = accessToken
 onMounted(() => {
   const map = new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/cjnbennett/clhli6yhp009p01rfbkox2bbg',
+    style: 'mapbox://styles/mapbox/satellite-v9',
     center: westernAustralia,
     maxBounds: bounds,
     minZoom: 0,
   })
+
+  const initialZoom = map.getZoom()
 
   map.on('load', () => {
     map.addSource('places', {
@@ -58,7 +62,6 @@ onMounted(() => {
 
     map.on('mouseenter', 'places', (e) => {
       map.getCanvas().style.cursor = 'pointer'
-
       // Copy coordinates array.
       const coordinates = e.features[0].geometry.coordinates.slice()
       const properties = e.features[0].properties
@@ -86,6 +89,11 @@ onMounted(() => {
     })
 
     map.on('click', 'places', (e) => {
+      const properties = e.features[0].properties
+
+      emitter.emit('properties', properties)
+
+
       popup.remove()
       const targetZoom = 8;  // Adjust to your desired zoom level
       
@@ -96,6 +104,13 @@ onMounted(() => {
       map.flyTo({ center: target, speed: 2, zoom: targetZoom });
       props.toggleSidebar()
     })
+
+    emitter.on('sidebarClosed', (value: any) => {
+      map.flyTo({ center: westernAustralia, speed: 2, zoom: initialZoom});
+    });
   })
 })
+
+
+
 </script>

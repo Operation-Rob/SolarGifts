@@ -1,21 +1,3 @@
-<script setup lang="ts">
-import { Dialog as HeadlessDialog, TransitionRoot, TransitionChild } from '@headlessui/vue'
-import { ref } from 'vue'
-
-const props = defineProps({
-  show: {
-    type: Boolean,
-    default: false
-  },
-  description: {
-    type: String,
-    default: 'No description provided'
-  }
-})
-const open = ref(props.show)
-</script>
-
-
 <template>
   <div>
     <TransitionRoot :show="props.show" as="div">
@@ -40,24 +22,28 @@ const open = ref(props.show)
               leaveTo="translate-x-full"
               class="w-screen max-w-[75vw]"
             >
-              <div class="flex flex-col h-full overflow-y-scroll bg-white shadow-xl">
+              <div class="flex flex-col h-full bg-white shadow-xl">
                 <div class="px-4 py-6 sm:px-6">
                   <div class="flex items-start justify-between">
-                    <HeadlessDialog.Title class="text-lg font-medium text-gray-900"
-                      >Shopping cart</HeadlessDialog.Title
-                    >
-
                     <!-- Add the description -->
-
-                    <p class="ml-3 text-sm text-gray-500" v-if="description">
-                      {{ description }}
-                    </p>
+                    <div>
+                      <img :src="`images/communities/${properties.image}`" alt="Community logo" />
+                      <p class="ml-3 text-sm text-gray-500" v-if="properties">
+                        {{ properties.description }}
+                      </p>
+                      <div>
+                      </div>
+                    </div>
 
                     <div class="flex items-center ml-3 h-7">
                       <button
                         class="text-gray-400 bg-white rounded-md hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                        @click="$emit('closed')"
+                        @click="
+                          $emit('closed');
+                          emitter.emit('sidebarClosed', 100)
+                        "
                       >
+                      
                         <span class="sr-only">Close panel</span>
                         <!-- Heroicon name: outline/x -->
                         <svg
@@ -81,14 +67,7 @@ const open = ref(props.show)
                 </div>
 
                 <div class="relative flex-1 px-4 mt-6 sm:px-6">
-                  <!-- Replace with your content -->
-                  <div class="absolute inset-0 px-4 sm:px-6">
-                    <div
-                      class="h-full border-2 border-gray-200 border-dashed"
-                      aria-hidden="true"
-                    ></div>
-                  </div>
-                  <!-- /End replace -->
+                  <InputSlider />
                 </div>
               </div>
             </TransitionChild>
@@ -99,3 +78,27 @@ const open = ref(props.show)
   </div>
 </template>
 
+<script setup lang="ts">
+import { Dialog as HeadlessDialog, TransitionRoot, TransitionChild } from '@headlessui/vue'
+import { inject, ref } from 'vue'
+import Slider from '@vueform/slider'
+import InputSlider   from '@/components/Slider/InputSlider.vue'
+
+const props = defineProps({
+  show: {
+    type: Boolean,
+    default: false
+  }
+})
+const open = ref(props.show)
+
+const emitter: any = inject('emitter')
+
+let properties: any
+emitter.on('properties', (value: any) => {
+  properties = value
+})
+const value = 0;
+</script>
+
+<style src="@vueform/slider/themes/default.css"></style>
