@@ -4,7 +4,7 @@
       <h1 class="text-2xl font-semibold text-indigo-600">SolarGifts</h1>
       <nav>
         <ul class="flex space-x-4">
-          <li><a href="#" class="text-indigo-600 hover:text-indigo-900">Home</a></li>
+          <li><a href="/" class="text-indigo-600 hover:text-indigo-900">Home</a></li>
           <li><a href="#" class="text-indigo-600 hover:text-indigo-900">Communities</a></li>
           <li><a href="#" class="text-indigo-600 hover:text-indigo-900">My Donations</a></li>
           <li><a href="#" class="text-indigo-600 hover:text-indigo-900">Profile</a></li>
