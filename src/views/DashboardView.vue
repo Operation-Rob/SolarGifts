@@ -76,7 +76,29 @@ export default {
             totalDonations: 1,
             totalKwhProduced: 123,
             estimatedKwhNext20Years: 12323,
-            donations: [{ "id": "1231231", "date": "12/23/1342", "community": "Diji Diji Wakei", "amount": "100", "impact": "12344 KW/H" }],
+            donations: [
+              {
+                "id": "1231231",
+                "date": "23/12/2020",
+                "community": "Dandjoo Bidi",
+                "amount": "250",
+                "impact": "15456 kW"
+              },
+              {
+                "id": "4564561",
+                "date": "07/05/2021",
+                "community": "Wandoo Karda",
+                "amount": "150",
+                "impact": "8765 kW"
+              },
+              {
+                "id": "7897891",
+                "date": "18/09/2021",
+                "community": "Boorgoon",
+                "amount": "500",
+                "impact": "30456 kW"
+              }
+            ],
             communityUpdates: [
                 { "id": "123123", "msg": "We have installed 10 new solar panels in the community center!" },
                 { "id": "123124", "msg": "WOO WE GOT SOLARRR YASSS!" },
