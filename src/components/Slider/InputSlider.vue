@@ -1,16 +1,23 @@
 <template>
   <div class="slidecontainer">
-    <input type="range" min="1" max="100" class="slider" id="donation"
-    :value="modelValue" @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
+    <input
+      type="range"
+      min="1"
+      max="100"
+      class="slider"
+      id="donation"
+      :value="modelValue"
+      @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
     />
   </div>
-  {{ modelValue }}
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from "vue";
-const modelValue = '3'
-defineEmits(["update:modelValue"])
+import { defineProps, defineEmits } from 'vue'
+
+defineProps({ modelValue: Number })
+
+defineEmits(['update:modelValue'])
 </script>
 
 <style>

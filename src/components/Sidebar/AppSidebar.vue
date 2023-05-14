@@ -27,7 +27,7 @@
                   <div class="flex items-start justify-between">
                     <!-- Add the description -->
                     <div>
-                      <img :src="`images/communities/${properties.image}`" alt="Community logo" />
+                      <img :src="`images/communities/${properties.image}`" class="w-40 h-40" alt="Community logo" />
                       <p class="ml-3 text-sm text-gray-500" v-if="properties">
                         {{ properties.description }}
                       </p>
@@ -67,7 +67,8 @@
                 </div>
 
                 <div class="relative flex-1 px-4 mt-6 sm:px-6">
-                  <InputSlider />
+                  {{ currency.format(donationValue) }}
+                  <InputSlider v-model="donationValue"  />
                 </div>
               </div>
             </TransitionChild>
@@ -81,7 +82,6 @@
 <script setup lang="ts">
 import { Dialog as HeadlessDialog, TransitionRoot, TransitionChild } from '@headlessui/vue'
 import { inject, ref } from 'vue'
-import Slider from '@vueform/slider'
 import InputSlider   from '@/components/Slider/InputSlider.vue'
 
 const props = defineProps({
@@ -98,7 +98,13 @@ let properties: any
 emitter.on('properties', (value: any) => {
   properties = value
 })
-const value = 0;
+
+const donationValue = ref(50)
+
+const currency = new Intl.NumberFormat('en-AU', {
+  style: 'currency',
+  currency: 'AUD',
+});
 </script>
 
 <style src="@vueform/slider/themes/default.css"></style>
