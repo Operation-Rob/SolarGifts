@@ -18,5 +18,4 @@ const showSidebar = ref(false)
 const toggleSidebar = () => {
   showSidebar.value = !showSidebar.value
 }
-
 </script>
