@@ -3,7 +3,6 @@
     <AppMap
     class="w-full h-[calc(100vh-56px)]"
     :toggleSidebar="toggleSidebar" />
-    >
   <AppSidebar :show="showSidebar" @closed="showSidebar = false" />
 </template>
 
@@ -18,5 +17,5 @@ const showSidebar = ref(false)
 const toggleSidebar = () => {
   showSidebar.value = !showSidebar.value
 }
-s
+
 </script>
