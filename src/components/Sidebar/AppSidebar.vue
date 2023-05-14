@@ -27,7 +27,10 @@
                   <div class="flex items-start justify-between">
                     <!-- Add the description -->
                     <div>
-                      <img :src="`images/communities/${properties.image}`" class="w-40 h-40" alt="Community logo" />
+                      <div class="flex flex-row mb-7">
+                        <img :src="`images/communities/${properties.image}`" class="w-40 h-40" alt="Community logo" />
+                        <div class="flex items-center w-full ml-10 text-4xl">{{ properties.name }}</div>
+                      </div>
                       <p class="ml-3 text-sm text-gray-500" v-if="properties">
                         {{ properties.description }}
                       </p>
@@ -66,9 +69,17 @@
                   </div>
                 </div>
 
-                <div class="relative flex-1 px-4 mt-6 sm:px-6">
-                  {{ currency.format(donationValue) }}
-                  <InputSlider v-model="donationValue"  />
+                <div class="relative flex flex-col items-center content-center flex-1 w-full px-4 mt-6 sm:px-6">
+                  <div class="flex flex-col h-40 p-2 bg-green-200 rounded-lg w-60">
+                    <div class="flex justify-center text-xl">
+                      Donation Amount
+                    </div>
+                    <div class="flex items-center justify-center h-full text-3xl">
+                      {{ currency.format(donationValue) }}
+                    </div>
+                  </div>
+                  <InputSlider v-model="donationValue" class="my-5" />
+                  <button class="px-4 py-3 text-white transition-all bg-blue-500 rounded-3xl hover:bg-blue-600">Donate Now</button>
                 </div>
               </div>
             </TransitionChild>

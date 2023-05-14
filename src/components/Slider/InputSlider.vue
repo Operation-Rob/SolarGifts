@@ -3,7 +3,7 @@
     <input
       type="range"
       min="1"
-      max="100"
+      max="1000"
       class="slider"
       id="donation"
       :value="modelValue"
