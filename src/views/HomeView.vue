@@ -1,9 +1,8 @@
 <template>
-    <TopBar></TopBar>
+    <TopBar />
     <AppMap
-    class="w-full h-[calc(100vh-24px)]"
+    class="w-full h-[calc(100vh-56px)]"
     :toggleSidebar="toggleSidebar" />
-    >
   <AppSidebar :show="showSidebar"  />
 </template>
 

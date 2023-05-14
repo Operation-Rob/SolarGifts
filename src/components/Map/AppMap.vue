@@ -19,6 +19,7 @@ const props = defineProps({
 const accessToken =
   'pk.eyJ1IjoiY2puYmVubmV0dCIsImEiOiJjbGhsaTRxc2EwOWw3M3FwOTQ0N3luaW5qIn0.8XbLwV61cr2oFs7ue0wCCw'
 const westernAustralia: [number, number] = [121.8997, -25.5528]
+const bounds: [number, number, number, number]= [ 104.9211, -42.1406, 136.0019, -6.6683 ]
 
 mapboxgl.accessToken = accessToken
 
@@ -27,8 +28,10 @@ onMounted(() => {
     container: 'map',
     style: 'mapbox://styles/cjnbennett/clhli6yhp009p01rfbkox2bbg',
     center: westernAustralia,
-    zoom: 4
+    maxBounds: bounds,
+    minZoom: 0,
   })
+
   map.on('load', () => {
     map.addSource('places', {
       type: 'geojson',
