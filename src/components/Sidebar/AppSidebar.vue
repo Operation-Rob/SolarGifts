@@ -93,7 +93,7 @@
                   </div>
                   <div class="w-full">
                     <p>Donation Amount</p>
-                    <InputSlider :min="1" :max="500" v-model="donationValue" class="" />
+                    <InputSlider :min="1" :max="500" v-model="donationValue" class="mb-4" />
                   </div>
                   <button
                     class="px-4 py-3 text-white transition-all bg-blue-500 rounded-xl hover:bg-blue-600"
@@ -157,5 +157,4 @@ const currency = new Intl.NumberFormat('en-AU', {
   style: 'currency',
   currency: 'AUD'
 })
-
 </script>

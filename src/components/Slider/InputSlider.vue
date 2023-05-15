@@ -1,15 +1,26 @@
 <template>
-  <div class="slidecontainer">
+  <div class="container">
     <input
       type="range"
-      :min="min"
+      :min="0"
       :max="max"
       :step="step"
       class="slider"
       id="donation"
+      list="tickmarks"
       :value="modelValue"
       @input="$emit('update:modelValue', ($event.target as HTMLInputElement).value)"
     />
+    <datalist id="tickmarks">
+      <option>50</option>
+      <option>250</option>
+      <option>500</option>
+    </datalist>
+    <div class="relative">
+      <div class="absolute -translate-y-2 pointer-events-none left-[calc(10%+2px)] h-3 w-3 rounded-full bg-blue-500"></div>
+      <div class="absolute -translate-y-2 pointer-events-none left-[calc(50%-6px)] h-3 w-3 rounded-full bg-blue-500"></div>
+      <div class="absolute -translate-y-2 pointer-events-none right-[4px] h-3 w-3 rounded-full bg-blue-500"></div>
+    </div>
   </div>
 </template>
 
@@ -20,10 +31,10 @@ defineEmits(['update:modelValue'])
 </script>
 
 <style>
-.slidecontainer {
-  width: 100%; /* Width of the outside container */
-}
 .slider {
+  display: flex;
+  align-items: center;
+
   -webkit-appearance: none;
   width: 100%;
   height: 5px;
@@ -36,6 +47,8 @@ defineEmits(['update:modelValue'])
 }
 
 .slider::-webkit-slider-thumb {
+  display: flex;
+  justify-content: center;
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -45,11 +58,4 @@ defineEmits(['update:modelValue'])
   cursor: pointer;
 }
 
-.slider::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #04aa6d;
-  cursor: pointer;
-}
 </style>
