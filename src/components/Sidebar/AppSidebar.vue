@@ -92,7 +92,7 @@
                         </div>
                         <img
                           :src="`images/gifts/${gift}.jpg`"
-                          class="w-20 h-20 mx-2 rounded"
+                          class="w-20 h-20 ml-2 rounded"
                           alt=""
                         />
                       </div>
