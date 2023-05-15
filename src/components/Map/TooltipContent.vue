@@ -14,3 +14,9 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+  const properties = defineProps({
+    properties: Object,
+  })
+</script>
