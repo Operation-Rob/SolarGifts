@@ -146,7 +146,7 @@ emitter.on('properties', (value: any) => {
       } else if (donationValue.value >= 50) {
         gift.value = gifts[0]
       } else {
-        gift.value = "Please donate receive to get a gift!"
+        gift.value = "Donate more receive to get a gift!"
       }
   })
 })
