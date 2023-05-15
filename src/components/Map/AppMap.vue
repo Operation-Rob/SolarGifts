@@ -6,7 +6,7 @@
 import 'mapbox-gl/dist/mapbox-gl.css'
 import mapboxgl from 'mapbox-gl'
 import dataset from '@/data/features.json'
-import { onMounted, createApp, defineComponent, nextTick, inject } from 'vue'
+import { onMounted, createApp, defineComponent, nextTick, inject, render , h} from 'vue'
 import TooltipContent from '@/components/Map/TooltipContent.vue'
 
 const props = defineProps({
@@ -72,15 +72,22 @@ onMounted(() => {
 
       popup.setLngLat(coordinates).setHTML('<div id="popup-content"></div>').addTo(map)
 
-      const popupComponent = defineComponent({
-        extends: TooltipContent,
-        setup() {
-          return { properties }
-        }
-      })
+      // const popupComponent = defineComponent({
+      //   extends: TooltipContent,
+      //   setup() {
+      //     return { properties }
+      //   }
+      // })
       nextTick(() => {
-        createApp(popupComponent).mount('#popup-content')
-      })
+        // createApp(popupComponent).mount('#popup-content')
+        const popupComp = h(TooltipContent, {
+      // Add props, eventListeners etc. here
+      properties,
+    });
+
+    // Tell Vue to render the VNode inside the element with id
+    render(popupComp, document.getElementById("popup-content")!);
+  });
     })
 
     map.on('mouseleave', 'places', () => {

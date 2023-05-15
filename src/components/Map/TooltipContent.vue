@@ -3,20 +3,20 @@
     <div class="flex-shrink-0">
       <img
         class="rounded-full w-14 h-14"
-        :src="`images/communities/${properties.image}`"
+        :src="`images/communities/${props.properties.image}`"
         alt="Community logo"
       />
     </div>
     <div class="ml-3">
       <p class="text-lg font-medium text-gray-900">
-        {{ properties.name }}
+        {{ props.properties.name }}
       </p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-  const properties = defineProps({
-    properties: Object,
-  })
+const props = defineProps({
+  properties: { required: true, type: Object }
+})
 </script>
