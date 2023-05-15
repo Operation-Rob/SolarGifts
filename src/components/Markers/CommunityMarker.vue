@@ -21,7 +21,7 @@
 
 <script setup lang="ts">
 import { MapboxMarker } from '@studiometa/vue-mapbox-gl'
-import { defineProps, ref } from 'vue'
+import { ref } from 'vue'
 import AppSidebar from '../Sidebar/AppSidebar.vue'
 
 
