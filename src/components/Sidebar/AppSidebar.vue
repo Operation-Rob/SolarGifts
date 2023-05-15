@@ -98,6 +98,7 @@
                           {{ gift }}
                         </div>
                         <img
+                          v-if="donationValue >= 50"
                           :src="`images/gifts/${gift}.jpg`"
                           class="w-20 h-20 ml-2 rounded"
                           alt=""
@@ -108,7 +109,7 @@
                   <div class="w-full my-4">
                     <p class="mb-3 font-bold">Donation Amount</p>
                     <InputSlider :min="1" :max="500" v-model="donationValue" class="mb-4" />
-                    <p class="mt-6 font-bold">Donation Frquency</p>
+                    <p class="mt-6 font-bold">Donation Frequency</p>
                     <div class="flex">
                       <input type="radio" id="once-off" name="donation" value="once-off" class="mr-1" />
                       <label for="once-off" class="mr-4">Once off</label>
