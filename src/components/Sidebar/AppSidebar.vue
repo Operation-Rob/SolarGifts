@@ -27,15 +27,20 @@
                   <div class="flex items-start justify-between">
                     <!-- Add the description -->
                     <div>
-                      <div class="flex flex-row mb-7">
-                        <img :src="`images/communities/${properties.image}`" class="w-40 h-40" alt="Community logo" />
-                        <div class="flex items-center w-full ml-10 text-4xl">{{ properties.name }}</div>
+                      <div class="flex flex-row mb-3">
+                        <img
+                          :src="`images/communities/${properties.image}`"
+                          class="w-40 h-40"
+                          alt="Community logo"
+                        />
+                        <div class="flex items-center w-full ml-10 text-4xl">
+                          {{ properties.name }}
+                        </div>
                       </div>
-                      <p class="ml-3 text-sm text-gray-500" v-if="properties">
+                      <p class="text-sm text-gray-500" v-if="properties">
                         {{ properties.description }}
                       </p>
-                      <div>
-                      </div>
+                      <div></div>
                     </div>
 
                     <div class="flex items-center ml-3 h-7">
@@ -46,7 +51,6 @@
                           emitter.emit('sidebarClosed', 100)
                         "
                       >
-                      
                         <span class="sr-only">Close panel</span>
                         <!-- Heroicon name: outline/x -->
                         <svg
@@ -69,18 +73,40 @@
                   </div>
                 </div>
 
-                <div class="relative flex flex-col items-center content-center flex-1 w-full px-4 mt-6 sm:px-6">
-                  <div class="flex flex-col h-40 p-2 bg-green-200 rounded-lg w-60">
-                    <div class="flex justify-center text-xl">
-                      Donation Amount
+                <div
+                  class="relative flex flex-col items-center content-center flex-1 w-full px-4 sm:px-6"
+                >
+                  <div class="flex flex-row">
+                    <div class="flex flex-col p-2 mr-5 bg-green-200 rounded-lg h-30 w-60">
+                      <div class="flex justify-center text-xl">Donation Amount</div>
+                      <div class="flex items-center justify-center h-full text-3xl">
+                        {{ currency.format(donationValue) }}
+                      </div>
                     </div>
-                    <div class="flex items-center justify-center h-full text-3xl">
-                      {{ currency.format(donationValue) }}
+
+                    <div class="flex flex-col h-32 p-2 bg-green-200 rounded-lg w-80">
+                      <div class="flex justify-center text-xl text-center">Your Gift:</div>
+                      <div class="flex items-center justify-center h-full text-3xl text-center">
+                        {{ gift }}
+                      </div>
                     </div>
                   </div>
-                  <InputSlider v-model="donationValue" class="my-5" />
-                  <button class="px-4 py-3 text-white transition-all bg-blue-500 rounded-3xl hover:bg-blue-600">Donate Now</button>
+                  <div class="w-full">
+                    <p>Donation Amount</p>
+                    <InputSlider :min="1" :max="500" v-model="donationValue" class="" />
+                  </div>
+                  <button
+                    class="px-4 py-3 text-white transition-all bg-blue-500 rounded-xl hover:bg-blue-600"
+                  >
+                    Donate Now
+                  </button>
                 </div>
+                <p class="mb-4 ml-6">
+                  20% of your donations goes to other communities in need<i
+                    class="fa fa-sort-numeric-desc"
+                    aria-hidden="true"
+                  ></i>
+                </p>
               </div>
             </TransitionChild>
           </div>
@@ -92,8 +118,8 @@
 
 <script setup lang="ts">
 import { Dialog as HeadlessDialog, TransitionRoot, TransitionChild } from '@headlessui/vue'
-import { inject, ref } from 'vue'
-import InputSlider   from '@/components/Slider/InputSlider.vue'
+import { inject, ref, watchEffect } from 'vue'
+import InputSlider from '@/components/Slider/InputSlider.vue'
 
 const props = defineProps({
   show: {
@@ -106,16 +132,30 @@ const open = ref(props.show)
 const emitter: any = inject('emitter')
 
 let properties: any
+let gifts: string
+const gift = ref();
 emitter.on('properties', (value: any) => {
   properties = value
+  gifts = JSON.parse(properties.rewards)
+
+  watchEffect(() => {
+      if (donationValue.value >= 500) {
+        gift.value = gifts[2]
+      } else if (donationValue.value >= 250) {
+        gift.value = gifts[1]
+      } else if (donationValue.value >= 50) {
+        gift.value = gifts[0]
+      } else {
+        gift.value = "Please donate receive to get a gift!"
+      }
+  })
 })
 
 const donationValue = ref(50)
 
 const currency = new Intl.NumberFormat('en-AU', {
   style: 'currency',
-  currency: 'AUD',
-});
-</script>
+  currency: 'AUD'
+})
 
-<style src="@vueform/slider/themes/default.css"></style>
+</script>

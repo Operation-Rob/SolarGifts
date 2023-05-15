@@ -2,8 +2,9 @@
   <div class="slidecontainer">
     <input
       type="range"
-      min="1"
-      max="1000"
+      :min="min"
+      :max="max"
+      :step="step"
       class="slider"
       id="donation"
       :value="modelValue"
@@ -13,9 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from 'vue'
-
-defineProps({ modelValue: Number })
+defineProps({ modelValue: Number, min: Number, max: Number, step: Number })
 
 defineEmits(['update:modelValue'])
 </script>
@@ -27,7 +26,7 @@ defineEmits(['update:modelValue'])
 .slider {
   -webkit-appearance: none;
   width: 100%;
-  height: 15px;
+  height: 5px;
   border-radius: 5px;
   background: #d3d3d3;
   outline: none;
@@ -39,8 +38,8 @@ defineEmits(['update:modelValue'])
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   background: #04aa6d;
   cursor: pointer;
