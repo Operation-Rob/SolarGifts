@@ -1,10 +1,9 @@
 <template>
-    <TopBar></TopBar>
+    <TopBar />
     <AppMap
-    class="w-full h-[calc(100vh-24px)]"
+    class="w-full h-[calc(100vh-56px)]"
     :toggleSidebar="toggleSidebar" />
-    >
-  <AppSidebar :show="showSidebar" @closed="showSidebar = false" />
+  <AppSidebar :show="showSidebar" @closed="showSidebar = false"/>
 </template>
 
 <script setup lang="ts">

@@ -5,7 +5,8 @@
       "properties": {
         "image": "1.png",
         "name": "Wunyunba",
-        "description": "Nestled in a picturesque valley, Wunyunba is known for its vibrant fields and friendly community. The residents here take pride in their sustainable lifestyle and embrace solar energy. Their handmade gifts include beautifully crafted sun catchers and stained glass artworks that capture the essence of their sun-kissed surroundings."
+        "description": "Nestled in a picturesque valley, Wunyunba is known for its vibrant fields and friendly community. The residents here take pride in their sustainable lifestyle and embrace solar energy. Their handmade gifts include beautifully crafted sun catchers and stained glass artworks that capture the essence of their sun-kissed surroundings.",
+        "rewards": ["stained glass bracelet","stained glass medallion","sun catcher"]
       },
       "geometry": {
         "coordinates": [
@@ -21,7 +22,8 @@
       "properties": {
         "image": "2.png",
         "name": "Djindaan",
-        "description": "Djindaan is a close-knit community surrounded by lush greenery and rolling hills. The residents value peace and tranquility, and their handmade gifts reflect their love for nature. They create intricately designed wooden birdhouses and hand-carved walking sticks adorned with delicate engravings."
+        "description": "Djindaan is a close-knit community surrounded by lush greenery and rolling hills. The residents value peace and tranquility, and their handmade gifts reflect their love for nature. They create intricately designed wooden birdhouses and hand-carved walking sticks adorned with delicate engravings.",
+        "rewards": ["bird whistle","engraved walking stick","wooden birdhouse"]
       },
       "geometry": {
         "coordinates": [
@@ -37,7 +39,8 @@
       "properties": {
         "image": "3.png",
         "name": "Nyinda",
-        "description": "Situated along the banks of a meandering river, Nyinda is a serene and idyllic village. The locals have a deep connection with the water and showcase their gratitude through handmade pottery. They craft exquisite ceramic vases and bowls inspired by the river's calming flow, decorated with intricate patterns and glazes."
+        "description": "Situated along the banks of a meandering river, Nyinda is a serene and idyllic village. The locals have a deep connection with the water and showcase their gratitude through handmade pottery. They craft exquisite ceramic vases and bowls inspired by the river's calming flow, decorated with intricate patterns and glazes.",
+        "rewards": ["ceramic earring","ceramic river bowl","ceramic river vase"]
       },
       "geometry": {
         "coordinates": [
@@ -53,7 +56,8 @@
       "properties": {
         "image": "4.png",
         "name": "Boorgoon",
-        "description": "Hidden amidst a dense pine forest, Boorgoon is a haven for outdoor enthusiasts and nature lovers. The community is renowned for its talented woodworkers who transform fallen timber into stunning handmade gifts. They create one-of-a-kind wooden cutting boards, intricate jewelry boxes, and finely carved wooden ornaments."
+        "description": "Hidden amidst a dense pine forest, Boorgoon is a haven for outdoor enthusiasts and nature lovers. The community is renowned for its talented woodworkers who transform fallen timber into stunning handmade gifts. They create one-of-a-kind wooden cutting boards, intricate jewelry boxes, and finely carved wooden ornaments.",
+        "rewards": ["wooden desktop ornament","wooden cutting board","jarrah jewelry box"]
       },
       "geometry": {
         "coordinates": [
@@ -69,7 +73,8 @@
       "properties": {
         "image": "5.png",
         "name": "Dandjoo Bidi",
-        "description": "Dandjoo Bidi is a coastal community blessed with pristine beaches and a thriving fishing industry. The residents here celebrate their maritime heritage through their handmade gifts. They craft exquisite seashell jewelry, intricately woven fishing nets, and decorative glass bottles filled with sand and seashells, reminiscent of their beachside location."
+        "description": "Dandjoo Bidi is a coastal community blessed with pristine beaches and a thriving fishing industry. The residents here celebrate their maritime heritage through their handmade gifts. They craft exquisite seashell jewelry, intricately woven fishing nets, and decorative glass bottles filled with sand and seashells, reminiscent of their beachside location.",
+        "rewards": ["seashell bottle","seashell necklace","handwoven fishing net"]
       },
       "geometry": {
         "coordinates": [
@@ -85,7 +90,8 @@
       "properties": {
         "image": "6.png",
         "name": "Wandoo Karda",
-        "description": "Tucked away in a peaceful valley, Wandoo Karda is known for its lush meadows and blooming wildflowers. The community's skilled artisans specialize in traditional basket weaving. They create beautiful handwoven baskets using locally sourced natural fibers, perfect for picnics or as decorative pieces for homes."
+        "description": "Tucked away in a peaceful valley, Wandoo Karda is known for its lush meadows and blooming wildflowers. The community's skilled artisans specialize in traditional basket weaving. They create beautiful handwoven baskets using locally sourced natural fibers, perfect for picnics or as decorative pieces for homes.",
+        "rewards": ["plant textile sash","grass woven necklace","handwoven basket"]
       },
       "geometry": {
         "coordinates": [
@@ -101,7 +107,8 @@
       "properties": {
         "image": "7.png",
         "name": "Djidi Djidi Wirn",
-        "description": "Overlooking the vast ocean, Djidi Djidi Wirn greets each day with breathtaking views of the sunrise. The residents here are skilled in the art of pottery and create unique handmade ceramic mugs, bowls, and plates. These items feature hand-painted coastal motifs and stunning gradients, capturing the essence of the ever-changing colors of the sky."
+        "description": "Overlooking the vast ocean, Djidi Djidi Wirn greets each day with breathtaking views of the sunrise. The residents here are skilled in the art of pottery and create unique handmade ceramic mugs, bowls, and plates. These items feature hand-painted coastal motifs and stunning gradients, capturing the essence of the ever-changing colors of the sky.",
+        "rewards": ["ceramic sea plate","ceramic sea bowl","ceramic sea mug"]
       },
       "geometry": {
         "coordinates": [
@@ -117,7 +124,8 @@
       "properties": {
         "image": "8.png",
         "name": "Balga Nyungar",
-        "description": "Surrounded by majestic oak trees, Balga Nyungar is a place of natural beauty and tranquility. The community members possess a remarkable talent for woodworking. They handcraft intricate wooden puzzles, decorative candle holders, and heirloom-quality furniture, using locally sourced timber and showcasing their dedication to craftsmanship."
+        "description": "Surrounded by majestic oak trees, Balga Nyungar is a place of natural beauty and tranquility. The community members possess a remarkable talent for woodworking. They handcraft intricate wooden puzzles, decorative candle holders, and heirloom-quality furniture, using locally sourced timber and showcasing their dedication to craftsmanship.",
+        "rewards": ["wooden puzzle","wooden candelabrum","carved wooden chair"]
       },
       "geometry": {
         "coordinates": [
@@ -133,7 +141,8 @@
       "properties": {
         "image": "9.png",
         "name": "Boodja Karla",
-        "description": "Set beneath a sparkling night sky, Boodja Karla is renowned for its clear, unpolluted views of the stars. The community's artisans create mesmerizing handmade dreamcatchers adorned with feathers, beads, and celestial-themed designs. These intricately woven dreamcatchers are believed to bring peaceful dreams and protect against negative energy."
+        "description": "Set beneath a sparkling night sky, Boodja Karla is renowned for its clear, unpolluted views of the stars. The community's artisans create mesmerizing handmade dreamcatchers adorned with feathers, beads, and celestial-themed designs. These intricately woven dreamcatchers are believed to bring peaceful dreams and protect against negative energy.",
+        "rewards": ["sleep charm","ochre incense","ornamental dreamcatcher"]
       },
       "geometry": {
         "coordinates": [
