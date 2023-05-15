@@ -91,15 +91,29 @@
                       </div>
                     </div>
                   </div>
-                  <div class="w-full">
-                    <p>Donation Amount</p>
+                  <div class="w-full my-4">
+                    <p class="mb-3 font-bold">Donation Amount</p>
                     <InputSlider :min="1" :max="500" v-model="donationValue" class="mb-4" />
+                    <p class="mt-6 font-bold">Donation Frquency</p>
+                    <div class="flex">
+                      <input type="radio" id="once-off" name="donation" value="once-off" class="mr-1" />
+                      <label for="once-off" class="mr-4">Once off</label>
+                      <input type="radio" id="monthly" name="donation" value="monthly"  class="mr-1"/>
+                      <label for="monthly" class="mr-4">Monthly</label>
+                      <input type="radio" id="yearly" name="donation" value="yearly" class="mr-1" />
+                      <label for="yearly">Yearly</label>
+                    </div>
+
                   </div>
-                  <button
+
+                  <a href="/dashboard">
+
+                    <button
                     class="px-4 py-3 text-white transition-all bg-blue-500 rounded-xl hover:bg-blue-600"
-                  >
+                    >
                     Donate Now
                   </button>
+                </a>
                 </div>
                 <p class="mb-4 ml-6">
                   20% of your donations goes to other communities in need<i
