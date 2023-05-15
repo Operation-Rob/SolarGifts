@@ -84,13 +84,15 @@
                       </div>
                     </div>
 
-                    <div class="flex flex-col h-32 p-2 bg-green-200 rounded-lg w-80">
-                      <div class="flex justify-center text-xl text-center">Your Gift:</div>
+                    <div class="flex flex-col h-32 p-2 bg-green-200 rounded-lg min-w-80">
+                      <div class="flex justify-center text-xl text-center">Your Gift</div>
                       <div class="flex items-center justify-center h-full text-3xl text-center">
-                        {{ gift }}
+                        <div>
+                          {{ gift }}
+                        </div>
                         <img
                           :src="`images/gifts/${gift}.jpg`"
-                          class="w-20 h-20 rounded"
+                          class="w-20 h-20 mx-2 rounded"
                           alt=""
                         />
                       </div>
