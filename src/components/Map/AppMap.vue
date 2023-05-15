@@ -60,7 +60,7 @@ onMounted(() => {
 
 
 
-    map.on('mouseenter', 'places', (e) => {
+    map.on('mouseenter', 'places', (e: any) => {
       map.getCanvas().style.cursor = 'pointer'
       // Copy coordinates array.
       const coordinates = e.features[0].geometry.coordinates.slice()
@@ -88,7 +88,7 @@ onMounted(() => {
       popup.remove()
     })
 
-    map.on('click', 'places', (e) => {
+    map.on('click', 'places', (e: any) => {
       const properties = e.features[0].properties
 
       emitter.emit('properties', properties)
