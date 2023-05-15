@@ -105,8 +105,8 @@
                       <label for="once-off" class="mr-4">Once off</label>
                       <input type="radio" id="monthly" name="donation" value="monthly"  class="mr-1"/>
                       <label for="monthly" class="mr-4">Monthly</label>
-                      <input type="radio" id="yearly" name="donation" value="yearly" class="mr-1" />
-                      <label for="yearly">Yearly</label>
+                      <input type="radio" id="quarterly" checked name="donation" value="quarterly" class="mr-1" />
+                      <label for="quarterly">quarterly</label>
                     </div>
 
                   </div>
