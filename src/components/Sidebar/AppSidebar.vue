@@ -88,6 +88,11 @@
                       <div class="flex justify-center text-xl text-center">Your Gift:</div>
                       <div class="flex items-center justify-center h-full text-3xl text-center">
                         {{ gift }}
+                        <img
+                          :src="`images/gifts/${gift}.jpg`"
+                          class="w-20 h-20 rounded"
+                          alt=""
+                        />
                       </div>
                     </div>
                   </div>

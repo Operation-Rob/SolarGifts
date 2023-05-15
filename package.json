@@ -18,6 +18,7 @@
     "mapbox-gl": "^2.14.1",
     "mitt": "^3.0.0",
     "pinia": "^2.0.36",
+    "run": "^1.4.0",
     "vue": "^3.3.2",
     "vue-router": "^4.2.0",
     "vue-slider-component": "^3.2.24"
