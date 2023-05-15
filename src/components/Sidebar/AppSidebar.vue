@@ -91,10 +91,17 @@
                       </div>
                     </div>
 
-                    <div class="flex flex-col h-32 p-2 bg-green-200 rounded-lg w-80">
-                      <div class="flex justify-center text-xl text-center">Your Gift:</div>
+                    <div class="flex flex-col h-32 p-2 bg-green-200 rounded-lg min-w-80">
+                      <div class="flex justify-center text-xl text-center">Your Gift</div>
                       <div class="flex items-center justify-center h-full text-3xl text-center">
-                        {{ gift }}
+                        <div>
+                          {{ gift }}
+                        </div>
+                        <img
+                          :src="`images/gifts/${gift}.jpg`"
+                          class="w-20 h-20 mx-2 rounded"
+                          alt=""
+                        />
                       </div>
                     </div>
                   </div>
@@ -107,8 +114,8 @@
                       <label for="once-off" class="mr-4">Once off</label>
                       <input type="radio" id="monthly" name="donation" value="monthly"  class="mr-1"/>
                       <label for="monthly" class="mr-4">Monthly</label>
-                      <input type="radio" id="yearly" name="donation" value="yearly" class="mr-1" />
-                      <label for="yearly">Yearly</label>
+                      <input type="radio" id="quarterly" checked name="donation" value="quarterly" class="mr-1" />
+                      <label for="quarterly">quarterly</label>
                     </div>
 
                   </div>
