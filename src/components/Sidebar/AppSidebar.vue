@@ -123,7 +123,7 @@
                 </a>
                 </div>
                 <p class="mb-4 ml-6">
-                  20% of your donations goes to other communities in need<i
+                  20% of your donation goes to other communities in need<i
                     class="fa fa-sort-numeric-desc"
                     aria-hidden="true"
                   ></i>
