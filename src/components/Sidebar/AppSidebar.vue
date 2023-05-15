@@ -33,9 +33,16 @@
                           class="w-40 h-40"
                           alt="Community logo"
                         />
-                        <div class="flex items-center w-full ml-10 text-4xl">
+                        <div class="flex justify-center items-center w-full ml-10 text-4xl">
                           {{ properties.name }}
                         </div>
+                        <div class="flex flex-col p-2 mr-5 bg-yellow-200 rounded-lg h-30 w-80">
+                          <div class="flex justify-center text-xl"> Solar Goal</div>
+                          <div class="flex items-center justify-center h-full text-m"> 
+                            {{ currency.format(properties.money_raised) }} / {{ currency.format(properties.goal) }}
+                          </div>
+                        </div>
+                        
                       </div>
                       <p class="text-sm text-gray-500" v-if="properties">
                         {{ properties.description }}
