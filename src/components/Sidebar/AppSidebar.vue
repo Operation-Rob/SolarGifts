@@ -57,6 +57,7 @@
                           $emit('closed');
                           emitter.emit('sidebarClosed', 100)
                         "
+                        tabindex="-1"
                       >
                         <span class="sr-only">Close panel</span>
                         <!-- Heroicon name: outline/x -->
