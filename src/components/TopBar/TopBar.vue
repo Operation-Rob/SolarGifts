@@ -8,13 +8,13 @@
 
   <div class="rounded-lg p-2 bg-slate-400 h-10 w-28 text-white flex items-center justify-center mr-2">
     <img class="d-flex justify-content-center d-flex justify-content-center rounded-lg py-2 bg-slate-400 h-10 mr-2"
-    src="global.svg">
+    src="/global.svg">
     English</div>
     
     
     <button class="btn resize" type="button"><img class="d-flex justify-content-center d-flex justify-content-center rounded-lg p-2 bg-slate-400 h-10 w-12 mr-2"
-      src="increase_font_size.svg"></button><button class="" type="button"><img
-        class="d-flex justify-content-center rounded-lg p-2 bg-slate-400 h-10" src="decrease_font_size.svg"></button>
+      src="/increase_font_size.svg"></button><button class="" type="button"><img
+        class="d-flex justify-content-center rounded-lg p-2 bg-slate-400 h-10" src="/decrease_font_size.svg"></button>
       </div>
 </nav></template>
 <script setup lang="ts">
