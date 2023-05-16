@@ -48,7 +48,7 @@
       <h2 class="text-lg font-semibold text-indigo-600">Community Updates</h2>
       <ul class="mt-4">
          <li v-for="update in communityUpdates" :key="update.id" class="border-b border-gray-200 py-4">
-          {{ update }}
+          {{ update.msg }}
         </li>
       </ul>
     </section>
