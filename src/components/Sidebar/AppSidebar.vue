@@ -107,17 +107,29 @@
                       </div>
                     </div>
                   </div>
-                  <div class="w-full my-4">
+                  <div class="w-full my-4 bg-slate-200 border-2 border-slate-300 rounded p-2">
                     <p class="mb-3 font-bold">Donation Amount</p>
                     <InputSlider :min="1" :max="500" v-model="donationValue" class="mb-4" />
                     <p class="mt-6 font-bold">Donation Frequency</p>
-                    <div class="flex">
-                      <input type="radio" id="once-off" name="donation" value="once-off" class="mr-1" />
-                      <label for="once-off" class="mr-4">Once off</label>
-                      <input type="radio" id="monthly" name="donation" value="monthly"  class="mr-1"/>
-                      <label for="monthly" class="mr-4">Monthly</label>
-                      <input type="radio" id="quarterly" checked name="donation" value="quarterly" class="mr-1" />
-                      <label for="quarterly">quarterly</label>
+                    <div>
+                    <div class="w-1/2 float-left">
+                      <div class="flex">
+                        <input type="radio" id="once-off" name="donation" value="once-off" class="mr-1" />
+                        <label for="once-off" class="mr-4">Once off</label>
+                        <input type="radio" id="monthly" name="donation" value="monthly"  class="mr-1"/>
+                        <label for="monthly" class="mr-4">Monthly</label>
+                        <input type="radio" id="quarterly" checked name="donation" value="quarterly" class="mr-1" />
+                        <label for="quarterly">Quarterly</label>
+                      </div>
+                    </div>
+                    <div class="w-1/2 float-right">
+                      <p class="text-right text-sm text-zinc-500">
+                        20% of your donation goes to other communities in need<i
+                          class="fa fa-sort-numeric-desc"
+                          aria-hidden="true"
+                        ></i>
+                      </p>
+                    </div>
                     </div>
 
                   </div>
@@ -131,12 +143,6 @@
                   </button>
                 </a>
                 </div>
-                <p class="mb-4 ml-6">
-                  20% of your donation goes to other communities in need<i
-                    class="fa fa-sort-numeric-desc"
-                    aria-hidden="true"
-                  ></i>
-                </p>
               </div>
             </TransitionChild>
           </div>
