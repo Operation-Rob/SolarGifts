@@ -11,7 +11,7 @@
         <div class="absolute inset-0 overflow-hidden">
           <HeadlessDialog.Overlay class="absolute inset-0" />
 
-          <div class="fixed inset-y-0 right-0 flex max-w-full pl-10">
+          <div class="fixed inset-y-0 right-0 flex max-w-full pl-0 md:pl-10">
             <TransitionChild
               as="div"
               enter="transform transition ease-in-out duration-500 sm:duration-700"
@@ -20,37 +20,40 @@
               leave="transform transition ease-in-out duration-500 sm:duration-700"
               leaveFrom="translate-x-0"
               leaveTo="translate-x-full"
-              class="w-screen max-w-[75vw]"
+              class="w-screen max-w-full md:max-w-[75vw]"
             >
               <div class="flex flex-col h-full bg-white shadow-xl">
                 <div class="px-4 py-6 sm:px-6">
                   <div class="flex items-start justify-between">
                     <!-- Add the description -->
-                    <div>
-                      <div class="flex flex-row mb-3">
-                        <img
-                          :src="`images/communities/${properties.image}`"
-                          class="w-40 h-40"
-                          alt="Community logo"
-                        />
-                        <div class="flex justify-center items-center w-full ml-10 text-4xl">
-                          {{ properties.name }}
-                        </div>
-                        <div class="flex flex-col p-2 mr-5 bg-yellow-200 rounded-lg h-30 w-80">
-                          <div class="flex justify-center text-xl"> Solar Goal</div>
-                          <div class="flex items-center justify-center h-full text-m"> 
-                            {{ currency.format(properties.money_raised) }} / {{ currency.format(properties.goal) }}
+                    <div class="grow">
+                      <div class="w-full">
+                        <div class="flex flex-row mb-3">
+                          <img
+                            :src="`images/communities/${properties.image}`"
+                            class="flex-none w-20 h-20 md:w-40 md:h-40"
+                            alt="Community logo"
+                          />
+                          <div class="grow text-center w-full text-4xl">
+                            {{ properties.name }}
+                          </div>
+                          <div class="content-end">
+                            <div class="flex flex-col p-2 bg-yellow-200 rounded-lg h-30 w-20 sm:w-60">
+                              <div class="flex justify-center text-xl"> Solar Goal</div>
+                              <div class="flex items-center justify-center h-full text-m"> 
+                                {{ currency.format(properties.money_raised) }} / {{ currency.format(properties.goal) }}
+                              </div>
+                            </div>
                           </div>
                         </div>
-                        
+
+                        <p class="text-sm text-gray-500" v-if="properties">
+                          {{ properties.description }}
+                        </p>
                       </div>
-                      <p class="text-sm text-gray-500" v-if="properties">
-                        {{ properties.description }}
-                      </p>
-                      <div></div>
                     </div>
 
-                    <div class="flex items-center ml-3 h-7">
+                    <div class="flex flex-right items-center ml-3 h-7">
                       <button
                         class="text-gray-400 bg-white rounded-md hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                         @click="
@@ -85,16 +88,16 @@
                   class="relative flex flex-col items-center content-center flex-1 w-full px-4 sm:px-6"
                 >
                   <div class="flex flex-row">
-                    <div class="flex flex-col p-2 mr-5 bg-green-200 rounded-lg h-30 w-60">
-                      <div class="flex justify-center text-xl">Donation Amount</div>
-                      <div class="flex items-center justify-center h-full text-3xl">
+                    <div class="flex flex-col p-2 mr-5 bg-green-200 rounded-lg h-30 w-50">
+                      <div class="flex justify-center text-l sm:text-xl">Donation Amount</div>
+                      <div class="flex items-center justify-center h-full text-2xl sm:text-3xl">
                         {{ currency.format(donationValue) }}
                       </div>
                     </div>
 
                     <div class="flex flex-col h-32 p-2 bg-green-200 rounded-lg min-w-80">
-                      <div class="flex justify-center text-xl text-center">Your Gift</div>
-                      <div class="flex items-center justify-center h-full text-3xl text-center">
+                      <div class="flex justify-center text-l sm:text-xl text-center">Your Gift</div>
+                      <div class="flex items-center justify-center h-full text-xl sm:text-xl text-center">
                         <div>
                           {{ gift }}
                         </div>
@@ -112,7 +115,7 @@
                     <InputSlider :min="1" :max="500" v-model="donationValue" class="mb-4" />
                     <p class="mt-6 font-bold">Donation Frequency</p>
                     <div>
-                    <div class="w-1/2 float-left">
+                    <div class="w-full sm:w-1/2 sm:float-left">
                       <div class="flex">
                         <input type="radio" id="once-off" name="donation" value="once-off" class="mr-1" />
                         <label for="once-off" class="mr-4">Once off</label>
@@ -122,8 +125,8 @@
                         <label for="quarterly">Quarterly</label>
                       </div>
                     </div>
-                    <div class="w-1/2 float-right">
-                      <p class="text-right text-sm text-zinc-500">
+                    <div class="w-full float-right sm:w-1/2">
+                      <p class="text-right text-xs text-zinc-500">
                         20% of your donation goes to other communities in need<i
                           class="fa fa-sort-numeric-desc"
                           aria-hidden="true"
