@@ -1,9 +1,9 @@
 <template>
   <div class="min-h-screen bg-indigo-100">
-    <header class="py-6 px-8 mb-8 bg-white shadow">
+    <header class="py-6 px-5 sm:px-8 mb-8 bg-white shadow">
       <h1 class="text-2xl font-semibold text-indigo-600">SolarGifts</h1>
       <nav>
-        <ul class="flex space-x-4">
+        <ul class="flex space-x-4 text-xs sm:text-base">
           <li><a href="/" class="text-indigo-600 hover:text-indigo-900">Home</a></li>
           <li><a href="#" class="text-indigo-600 hover:text-indigo-900">Communities</a></li>
           <li><a href="#" class="text-indigo-600 hover:text-indigo-900">My Donations</a></li>
@@ -17,18 +17,18 @@
       <h2 class="text-lg font-semibold text-indigo-600">Welcome back, {{ username }}!</h2>
     </section>
 
-    <section class="grid grid-cols-3 gap-4 px-8 mb-8">
-      <div class="col-span-1 p-6 bg-indigo-500 text-white shadow rounded">
-        <h2 class="text-lg font-semibold">Total Donations</h2>
-        <p class="text-4xl font-bold">{{ totalDonations }}</p>
+    <section class="grid grid-cols-3 gap-4 px-5 sm:px-8 mb-8">
+      <div class="flex flex-col col-span-1 p-3 sm:pt-3 sm:p-6 bg-indigo-500 text-white shadow rounded">
+        <h2 class="flex-grow font-semibold text-center text-sm sm:text-lg">Total Donations</h2>
+        <p class="text-4xl text-center font-bold">{{ totalDonations }}</p>
       </div>
-      <div class="col-span-1 p-6 bg-indigo-600 text-white shadow rounded">
-        <h2 class="text-lg font-semibold">Total kWh Produced</h2>
-        <p class="text-4xl font-bold">{{ totalKwhProduced }}</p>
+      <div class="flex flex-col col-span-1 p-3 sm:pt-3 sm:p-6 bg-indigo-600 text-white shadow rounded">
+        <h2 class="flex-grow font-semibold text-center text-sm sm:text-lg">Total kWh Produced</h2>
+        <p class="text-4xl text-center font-bold">{{ totalKwhProduced }}</p>
       </div>
-      <div class="col-span-1 p-6 bg-indigo-700 text-white shadow rounded">
-        <h2 class="text-lg font-semibold">Estimated kWh Next 20 Years</h2>
-        <p class="text-4xl font-bold">{{ estimatedKwhNext20Years }}</p>
+      <div class="flex flex-col col-span-1 p-3 sm:pt-3 sm:p-6 bg-indigo-700 text-white shadow rounded">
+        <h2 class="flex-grow font-semibold text-center text-sm sm:text-lg">Estimated kWh Next 20 Years</h2>
+        <p class="text-2xl sm:text-4xl text-center font-bold">{{ estimatedKwhNext20Years }}</p>
       </div>
     </section>
 
