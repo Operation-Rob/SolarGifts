@@ -73,7 +73,7 @@ export default {
     data() {
         return {
             username: "Sarah",
-            totalDonations: 1,
+            totalDonations: 3,
             totalKwhProduced: 123,
             estimatedKwhNext20Years: 12323,
             donations: [
